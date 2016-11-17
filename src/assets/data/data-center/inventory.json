@@ -1,0 +1,55 @@
+[
+  {
+    "id": 10,
+    "name": "RTR-ABCD-EFGH-IJKL-1",
+    "type": "Router",
+    "manufacturer": "Cisco",
+    "location": "Jurong East",
+    "parentid": 0,
+    "status": "Clear",
+    "icon": "zmdi zmdi-hc-fw zmdi-router",
+    "statusInfo": "Working properly",
+    "x": 1.3068878,
+    "y": 103.7333142,
+    "components": {
+      "name": "Interfaces",
+      "items":
+      [
+        {
+          "name": "fast ethernet0",
+          "type": "Interface",
+          "status": "Clear",
+          "icon": "zmdi zmdi-album",          
+          "statusInfo": "Working properly"
+        },
+        {
+          "name": "fast ethernet1",
+          "type": "Interface",
+          "status": "Major",
+          "icon": "zmdi zmdi-album",          
+          "statusInfo": "No connecvitity"
+        },
+        {
+          "name": "fast ethernet2",
+          "type": "Interface",
+          "status": "Minor",
+          "icon": "zmdi zmdi-album",          
+          "statusInfo": "Utilization is above 50%"
+        }
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "name": "RTR-ABCD-EFGH-IJKL-2",
+    "type": "Router",
+    "manufacturer": "Huawei",
+    "location": "Marina South Pier",
+    "parentid": 0,
+    "status": "Critical",
+    "icon": "zmdi zmdi-hc-fw zmdi-router",
+    "statusInfo": "No connectivity",
+    "x": 1.270958,
+    "y": 103.863242
+  }
+]

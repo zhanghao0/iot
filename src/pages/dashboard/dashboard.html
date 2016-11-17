@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+		<ion-buttons left>
+			<button ion-button clear icon-only (click)="navBack()">
+				<ion-icon name="arrow-back"></ion-icon>
+			</button>
+		</ion-buttons>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-card *ngFor="let chart of charts">
+		<ion-card-header (click)="toggleChart(chart)">
+			<ion-list no-lines>
+			  <ion-item color="light">
+			    {{chart.title}}
+			    <button ion-button clear item-right icon-only>
+			      <ion-icon [name]="chart.icon" [color]="chart.color"></ion-icon>
+			    </button>
+			  </ion-item>
+			</ion-list>
+	  </ion-card-header>
+	  <ion-card-content *ngIf="chart.visible">
+		  <div>
+		    <nvd3 [(options)]="chart.options" [(data)]="chart.data"></nvd3>
+		  </div>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>

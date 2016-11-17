@@ -1,0 +1,58 @@
+[
+  {
+    "id": 111,
+    "name": "Lamp 11",
+    "type": "Lamp",
+    "manufacturer": "Bosch",
+    "location": "Toa Payoh",
+    "parentid": 0,
+    "status": "Critical",
+    "icon": "zmdi zmdi-hc-fw zmdi-lamp",
+    "statusInfo": "No connectivity",
+    "x": 1.3375175976253308,
+    "y": 103.85386168956757,
+    "brightness": 10
+  },
+  {
+    "id": 112,
+    "name": "Lamp 12",
+    "type": "Lamp",
+    "manufacturer": "Bosch",
+    "location": "Toa Payoh",
+    "parentid": 0,
+    "status": "Clear",
+    "icon": "zmdi zmdi-hc-fw zmdi-lamp",
+    "statusInfo": "Working properly",
+    "x": 1.3369491241772669,
+    "y": 103.85454565286636,
+    "brightness": 40
+  },
+  {
+    "id": 121,
+    "name": "Lamp 21",
+    "type": "Lamp",
+    "manufacturer": "Bosch",
+    "location": "Toa Payoh",
+    "parentid": 0,
+    "status": "Clear",
+    "icon": "zmdi zmdi-hc-fw zmdi-lamp",
+    "statusInfo": "Working properly",
+    "x": 1.3377750195207807,
+    "y": 103.85399043560028,
+    "brightness": 70
+  },
+  {
+    "id": 122,
+    "name": "Lamp 22",
+    "type": "Lamp",
+    "manufacturer": "Bosch",
+    "location": "Toa Payoh",
+    "parentid": 0,
+    "status": "Clear",
+    "icon": "zmdi zmdi-hc-fw zmdi-lamp",
+    "statusInfo": "Working properly",
+    "x": 1.337110012902343,
+    "y": 103.8546958565712,
+    "brightness": 100
+  }
+]

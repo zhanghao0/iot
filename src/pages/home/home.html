@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Demo</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="iot-card-background-wrapper">
+	<ion-card *ngFor="let project of projects" (click)="openProjectHomePage(project)">
+    <img [src]="project.image"/>
+    <div class="iot-card-title">{{project.title}}</div>
+    <div class="iot-card-subtitle">{{project.subtitle}}</div>
+  </ion-card>
+</ion-content>

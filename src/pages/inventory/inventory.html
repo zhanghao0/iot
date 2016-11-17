@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button clear icon-only (click)="navBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Inventory</ion-title>
+
+    <ion-buttons right>
+      <button ion-button clear icon-only class="iot-inventory-header-button" (click)="changeSortMode()">
+        <ion-icon name="{{sortIcon}}"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-list>
+	  <ion-item text-wrap *ngFor="let item of items">
+	  	<ion-icon item-left large clear color="{{item.status}}" (click)="showStatus(item)"><i class="{{item.icon}}"></i></ion-icon>
+      <h3>{{item.name}}</h3>
+      <p>{{item.location}}</p>
+      <button ion-button clear item-right icon-only (click)="openInventoryDetailsPage(item)">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+	  </ion-item>
+	</ion-list>
+</ion-content>

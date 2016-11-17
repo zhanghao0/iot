@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{item.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-list>
+    <ion-item text-wrap>
+      <ion-label>Type: </ion-label>
+      <ion-label item-right>{{item.type}}</ion-label>
+    </ion-item>
+	  <ion-item text-wrap>
+      <ion-label>Status: </ion-label>
+      <ion-label item-right color="{{item.status}}">{{item.status}} ({{item.statusInfo}})</ion-label>
+	  </ion-item>
+    <ion-item text-wrap>
+      <ion-label>Location: </ion-label>
+      <ion-label item-right>{{item.location}}</ion-label>
+    </ion-item>
+	  <ion-item text-wrap>
+      <ion-label>Manufacturer: </ion-label>
+      <ion-label item-right>{{item.manufacturer}}</ion-label>
+	  </ion-item>
+    <ion-item>
+      <ion-label>Latitude: </ion-label>
+      <ion-label item-right>{{item.x}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Longitude: </ion-label>
+      <ion-label item-right>{{item.y}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="item.brightness >= 0">
+      <ion-label>Brightness: </ion-label>
+      <ion-badge item-right>{{item.brightness}}</ion-badge>
+    </ion-item>
+    <ion-item *ngIf="item.brightness >= 0">
+      <ion-range [(ngModel)]="item.brightness">
+        <ion-icon range-left small><i class="{{item.icon}}"></i></ion-icon>
+        <ion-icon range-right color="Major"><i class="{{item.icon}}"></i></ion-icon>
+      </ion-range>
+    </ion-item>
+	</ion-list>
+  <ion-list *ngIf="item.components">
+    <ion-list-header>
+      {{item.components.name}}
+    </ion-list-header>
+    <ion-item *ngFor="let componentItem of item.components.items">
+      <ion-icon item-left large clear color="{{componentItem.status}}" (click)="showComponentStatus(componentItem)"><i class="{{componentItem.icon}}"></i></ion-icon>
+      <h3>{{componentItem.name}}</h3>
+    </ion-item>
+  </ion-list>
+</ion-content>
