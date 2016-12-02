@@ -1,5 +1,7 @@
 # IoT (Internet of Things)
 
+* To view the demo, download Ionic View from App Store or Google Play and preview shared app with app ID (7CFB9566).
+
 This is a hybrid mobile application built on top of Ionic 2, AngularJS 2, Typescript, D3 and Google Maps. It consists of two demos:
 
 1. Smart Street Lighting Management Demo
